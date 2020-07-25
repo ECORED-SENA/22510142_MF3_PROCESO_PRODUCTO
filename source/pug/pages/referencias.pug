@@ -1,22 +1,30 @@
+include ../mixins/functions
+
 .container
 
-  ol
+    .header-ecored
+        h1 Referencias bibliográficas
 
-    li
-      p 
-        | Ferrandiz Bou, Santiago (2018).</br>
-        i Practica de Prototipos Avanzados. Valencia, España. Editorial de la Universidad Politécnica de Valencia.
-    li
-      p 
-        | Calduch, Juan (2014).</br> 
-        i Temas de composición arquitectónica. Tipo, Arquetipo, prototipo, modelo. Alicante, España. Editorial Club Universitario.   
+    .jumbotron.bg-white.referencias
+        +referenciaItem("Ferrandiz Bou, Santiago (2018). Practica de Prototipos Avanzados. Valencia, España. Editorial de la Universidad Politécnica de Valencia.", "")
+        +referenciaItem("Calduch, Juan (2014). Temas de composición arquitectónica. Tipo, Arquetipo, prototipo, modelo. Alicante, España. Editorial Club Universitario. ", "")
+        +referenciaItem("Ulrich, Karl T. (2009). Diseño y Desarrollo de Productos. Ciudad de Mexico, Mexico. Editorial Mc Graw Hill.", "")
 
-    li
-      p 
-        | Ulrich, Karl T. (2009).</br> 
-        i Diseño y Desarrollo de Productos. Ciudad de Mexico, Mexico. Editorial Mc Graw Hill. 
-   
+        .row.justify-content-between.align-items-center
 
+            .col-12.col-md-5.my-4
+                .jumbotron.p-4
+                    .d-flex.justify-content-center.align-items-center
+                        p.text-center.pl-4
+                            i.fa.fa-picture-o.fa-2x.text-center
+                        p.text-center.flex-grow-1 Fotografías y vectores tomados de <a href="https://www.shutterstock.com/" target="_blank">https://www.shutterstock.com/</a> y <a href="https://www.freepik.es/" target="_blank">https://www.freepik.es/</a>
+
+            .col-12.col-md-5.my-4
+                .jumbotron.p-4
+                    .d-flex.justify-content-center.align-items-center
+                        p.text-center.pl-4
+                            i.fa.fa-creative-commons.fa-2x.text-center
+                        p.text-center.flex-grow-1 Licencia Creative Commons <br> <strong>CC BY-NC-SA</strong><br> <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">Ver licencia.</a>            
    
 
     
