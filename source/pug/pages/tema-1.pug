@@ -1,0 +1,75 @@
+include ../mixins/functions
++pageHeader("Introducción", "assets/images/header/header_media.svg")
+
+.container#page-introduccion
+
+    .header-ecored
+        h1 1. Técnicas de modelado.
+
+    .jumbotron.bg-white 
+      .row.justify-content-center.align-items-center 
+        .col-sm-9.col-md-5.my-5.d-flex.justify-content-center
+          img(src="assets/images/pages/tema1/img_01.jpg", alt="").img-fluid
+
+        .col          
+          p Actualmente en el mercado han estado apareciendo nuevos programas para construir modelos tridimensionales complementando o simplemente sumándose a la oferta tradicional. Los programas de modelado trabajan mediante diferentes técnicas que facilitan la creación de algunas geometrías y son inadecuadas para la creación de otras. Las principales técnicas de modelado existentes son: 
+          ol 
+            li Modelado mecánico. 
+            li Modelado mediante curvas nurbs. 
+            li Modelado poligonal.      
+
+    .jumbotron.bg-white 
+      .row
+        .col-12 
+          .header-ecored#tema1_1
+            h2 1.1 Modelado mecánico
+        .col-12
+          p Es el más conocido en el mundo de la ingeniería y la arquitectura. Los programas que utilizan estos métodos de modelado fueron denominados programas Computer Aided Design, CAD, que traduce diseño asistido por computador. Aunque el significado de la sigla perfectamente podría abarcar todos los programas para el modelado 3D, esta se ha quedado ligada a los programas de modelado mecánico. El principio de estos programas es la creación de modelos sólidos mediante siluetas bidimensionales llamadas “sketches” o bocetos en el lenguaje técnico. Estas siluetas que pueden ser contornos abiertos o cerrados son usadas luego para crear volúmenes mediante herramientas que generan diferentes tipos de barridos. Estos barridos van desde el más simple que es llamado extrusión, el cual hace que se repita esta silueta a lo largo de una trayectoria recta hasta barridos de sección variable donde cambian tanto las siluetas como la forma y número de las trayectorias. Una vez es realizada alguna de estas operaciones de barrido (extrusión, revolución, barrido de sección continua, barrido de sección variable, barrido a través de siluetas cerradas) se acumula en lo que es llamado un árbol de procesos u operaciones.     
+
+      .row.mt-5
+        .col-12
+          .jumbotron
+            .row.justify-content-center.align-items-center
+              .col-auto
+                img(src="assets/images/pages/tema1/icon_01.svg", style="max-width: 120px").img-fluid.mb-3.mb-md-0
+              .col-10
+                p.mb-0 Los programas de modelado mecánico poseen una característica muy importante que los diferencia del resto, son paramétricos. Un programa es paramétrico cuando permite en cualquier momento modificar dimensiones de cualquier operación previa sin generar problemas en la reconstrucción del modelo. Estos cambios deben estar obviamente dentro de unos límites lógicos.
+
+      .row.justify-content-center.align-items-center.mt-5 
+        .col-sm-12.col-md-6.d-flex.justify-content-center.mb-5
+          img(src="assets/images/pages/tema1/img_02.jpg", alt="").img-fluid
+        .col-sm-12.col-md-6.d-flex.justify-content-center.mb-5
+          img(src="assets/images/pages/tema1/img_03.jpg", alt="").img-fluid
+
+    
+    .jumbotron.bg-white 
+      .row
+        .col-12 
+          .header-ecored#tema1_2
+            h2 1.2 Modelado mediante curvas
+        .col-12
+          p Aunque varios tipos de programas trabajan con esta técnica de modelado, Rhinoceros es el más conocido. Maneja los principios del modelado mecánico ya que genera superficies a través de barridos de líneas de contorno abierto y cerrado al igual que los modeladores mecánicos. A diferencia de los modeladores mecánicos, el modelado mediante Nurbs sólo sirve para generar superficies, nunca volúmenes. Los volúmenes son generados visualmente cuando las superficies forman un contorno cerrado.       
+
+      .row.justify-content-center.align-items-center.mt-5 
+        .col-sm-12.col-md-6.d-flex.justify-content-center.mb-5
+          img(src="assets/images/pages/tema1/img_05.jpg", alt="").img-fluid
+        .col-sm-12.col-md-6.d-flex.justify-content-center.mb-5
+          img(src="assets/images/pages/tema1/img_04.jpg", alt="").img-fluid
+
+      .row
+        .col-12
+          p La principal ventaja de la modelación mediante Nurbs (Non Uniform Rational BSplines) que tiene sobre los modeladores de polígonos es “que no hay facetas. Los modelos se pueden renderizar en cualquier resolución. Una malla se puede crear a partir del modelo en cualquier resolución” (McNeel y Associates, 2012, p. 2). Debido a las cualidades de las superficies generadas por los programas que utilizan esta técnica, son utilizados tanto por diseñadores e ingenieros para el desarrollo de productos como por artistas digitales para la generación de modelos para aplicaciones 3D como animaciones y juegos.
+
+    .jumbotron.bg-white 
+      .row
+        .col-12 
+          .header-ecored#tema1_3
+            h2 1.3 Modelado poligonal o de creación y edición de mallas
+        .col-12
+          p Esta es una técnica ampliamente utilizada por varios programas de modelado tridimensional existentes en el mercado. Se construyen objetos a partir de primitivas, que son la base para aplicar las herramientas de modelado de este tipo de programas. Aunque en el modelado poligonal es posible partir de otro tipo de elementos para la realización de geometrías como líneas que generen contorno para luego crear superficies, no es el método más práctico ya que se estaría desperdiciando tiempo. El objetivo es partir de la primitiva que más se parezca al objeto deseado o de un grupo de primitivas, las cuales son sometidas a operaciones booleanas para dar una forma base antes de comenzar a aplicar modificaciones en la malla. Una vez las primitivas tienen la forma deseada inicial, son convertidas en una malla o polimalla (el nombre cambia según el programa de modelado). Esta polimalla es ahora un conjunto de polígonos de 4 lados unidos entre sí; en esta se reconocen como entidades de trabajo los polígonos, las aristas y los vértices. Esto quiere decir que por medio de la selección de cualquiera de estos elementos se pueden hacer modificaciones a la malla.     
+
+      .row.justify-content-center.align-items-center.mt-5 
+        .col-sm-12.col-md-6.d-flex.justify-content-center.mb-5
+          img(src="assets/images/pages/tema1/img_06.jpg", alt="").img-fluid
+        .col-sm-12.col-md-6.d-flex.justify-content-center.mb-5
+          img(src="assets/images/pages/tema1/img_07.jpg", alt="").img-fluid  
